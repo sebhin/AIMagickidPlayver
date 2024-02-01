@@ -1,0 +1,153 @@
+.login-wrap {
+    background-color: #eef3fe;
+    height: 100vh;
+    overflow: hidden;
+}
+.login-container {
+    height: 100vh;
+    display: flex;
+    .login-robot {
+        width: 35%;
+        display: flex;
+        position: relative;
+        .box {
+            width: 60px;
+            height: 100vh;
+            background-color: var(--bs-blue-primary);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .robot-img {
+            flex-shrink: 0;
+            position: absolute;
+            left: -200px;
+            bottom: -50px;
+            width: 890px;
+        }
+    }
+    .login-form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5rem;
+        .logo {
+            width: 530px;
+        }
+        .login-text {
+            text-align: center;
+            h3 {
+                font-size: 50px;
+                font-weight: 700;
+                color: #009c19;
+            }
+            p {
+                font-size: 28px;
+                margin-top: 2rem;
+                font-weight: lighter;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            input[type='text'] {
+                border: var(--is-border);
+                width: 100%;
+                padding: 2rem;
+                border-radius: 4px;
+                font-family: 'NEXONLv1Gothic';
+                font-size: 24px;
+            }
+            .login-btn {
+                border: none;
+                width: 100%;
+                padding: 2rem;
+                border-radius: 4px;
+                font-family: 'NEXONLv1Gothic';
+                background-color: var(--bs-blue-primary);
+                color: var(--bs-white);
+                font-size: 16px;
+                margin-top: 0.5rem;
+                cursor: pointer;
+                font-size: 26px;
+            }
+        }
+    }
+    .input-error,
+    .login-error {
+        font-size: 1.5rem;
+        color: red;
+    }
+    .teacher {
+        font-size: 20px;
+        color: #767676;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+    // 2024-02-08 업데이트 v2 | 미디어쿼리 테스트
+    .login-container {
+        .login-form {
+            .logo {
+                width: 410px;
+            }
+        }
+        .login-robot {
+            .robot-img {
+                width: 660px;
+                bottom: -20px;
+                left: -100px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1023px) and (max-width: 1366px) {
+    .login-container {
+        .login-form {
+            .logo {
+                width: 500px;
+            }
+            form {
+                width: 70%;
+            }
+        }
+        .login-robot {
+            .robot-img {
+                width: 680px;
+                bottom: -20px;
+                left: -150px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .login-container {
+        .login-form {
+            .logo {
+                width: 440px;
+            }
+            .login-text {
+                p {
+                    margin-top: 0;
+                }
+            }
+            form {
+                width: 70%;
+            }
+        }
+        .teacher {
+            font-size: 24px;
+        }
+        .login-robot {
+            .robot-img {
+                width: 620px;
+                bottom: -20px;
+                left: -150px;
+            }
+        }
+    }
+}

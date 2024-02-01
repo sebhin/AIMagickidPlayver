@@ -1,0 +1,22 @@
+// 2024-01-24 | progress
+.progress-bar {
+    width: 30%;
+    height: 20px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    .progress {
+        height: 100%;
+        background-color: #f67891;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.6s;
+        font-family: 'NEXONLv1Gothic';
+        font-weight: bold;
+        // font-family 설정
+        border-radius: 10px;
+    }
+}

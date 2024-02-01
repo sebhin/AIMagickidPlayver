@@ -1,0 +1,138 @@
+.join-section {
+    padding: 150px 0 100px;
+    .txt-container {
+        width: 100%;
+        h4 {
+            font-size: 24px;
+        }
+        p {
+            color: gray;
+            margin: 0.5rem 0 1rem;
+        }
+    }
+    .join-tit {
+        font-size: 36px;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+    .membership-form {
+        border-top: 1px solid #111;
+        .inputs {
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: var(--is-border);
+            p {
+                width: 20%;
+            }
+            input {
+                border: var(--is-border);
+                width: 30%;
+                height: 46px;
+                padding: 0 1rem;
+                border-radius: 4px;
+            }
+            .email {
+                width: 15%;
+            }
+            .at {
+                padding: 0 0.5rem;
+            }
+            .email-options {
+                height: 46px;
+                width: 120px;
+                border: var(--is-border);
+                border-radius: 4px;
+                margin: 0 1rem;
+                padding: 0 0.2rem;
+            }
+            .overlap-chk {
+                height: 46px;
+                width: 120px;
+                border: var(--is-border);
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .colored-input {
+                background-color: #f3f3f3;
+                border-color: #f3f3f3;
+            }
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-left: 1rem;
+                flex: 1;
+            }
+            .message-success {
+                color: blue;
+            }
+        }
+    }
+    .form-btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 3rem;
+        button {
+            padding: 0.8rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            &.join-btn {
+                background-color: var(--bs-blue-primary);
+                color: var(--bs-white);
+                &:hover {
+                    background-color: var(--bs-blue-hovered);
+                }
+            }
+        }
+    }
+    .terms-container {
+        .check-inputs {
+            width: 25%;
+            margin: 2rem auto;
+        }
+        .term-box {
+            span {
+                display: flex;
+                padding-left: 1.6rem;
+            }
+        }
+        input[type='checkbox'] {
+            display: none;
+        }
+        input[type='checkbox'] + label {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            border: 1.6px solid #707070;
+            position: relative;
+        }
+        input[type='checkbox']:checked + label::after {
+            content: '✔';
+            font-size: 16px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .term-detail {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--bs-blue-primary);
+            border-bottom: 1px solid var(--bs-blue-primary);
+            padding-bottom: 0.1rem;
+        }
+        .term-total-box {
+            border: var(--is-border);
+            border-radius: 4px;
+            padding: 1rem;
+            line-height: 1.5;
+            color: rgb(95, 95, 95);
+        }
+    }
+}

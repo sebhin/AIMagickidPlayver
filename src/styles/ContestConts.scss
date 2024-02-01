@@ -1,0 +1,174 @@
+.toggle-btn-list {
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .made-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--bs-blue-primary);
+    }
+    .toggle-btn {
+        border: none;
+        font-size: 18px;
+        border-radius: 3rem;
+        padding: 8px 18px;
+        font-family: 'NEXONLv1Gothic';
+        background-color: var(--bs-white);
+        border: var(--is-border);
+        margin-right: 1rem;
+        cursor: pointer;
+        &.active {
+            background-color: var(--bs-blue-primary);
+            color: var(--bs-white);
+            border: 1px solid var(--bs-blue-primary);
+            font-weight: 700;
+        }
+    }
+}
+.selectbox {
+    float: right;
+    border: none;
+    font-size: 24px;
+    font-family: 'NEXONLv1Gothic';
+    cursor: pointer;
+}
+.tab-contents {
+    margin-top: 4rem;
+    .drawing-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5rem;
+        li {
+            width: 30%;
+            max-height: 360px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                object-fit: fill;
+            }
+        }
+        &::after {
+            content: '';
+            width: 30%;
+            height: 0;
+        }
+    }
+    .writing-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5rem;
+        .writing {
+            width: 30%;
+            cursor: pointer;
+            position: relative;
+            .writing-txt {
+                width: 100%;
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                .writing-tit {
+                    font-size: 20px;
+                    margin-bottom: 1rem;
+                }
+                .peom-create-date {
+                    color: #c2c2c2;
+                }
+            }
+        }
+        &::after {
+            content: '';
+            width: 30%;
+            height: 0;
+        }
+    }
+    .story4u-contents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 26px;
+        padding: 20px 0;
+        li {
+            cursor: pointer;
+            position: relative;
+            width: 300px;
+            .book-cover {
+                height: 222px;
+                left: 2px;
+                position: absolute;
+                overflow: hidden;
+                top: -1.5px;
+                width: 296px;
+                z-index: 10;
+            }
+            .book-bottom {
+                bottom: 3px;
+                left: 51%;
+                position: relative;
+                transform: translateX(-50%);
+                width: 110%;
+                z-index: 1;
+            }
+            .book-name-container {
+                left: 50%;
+                position: absolute;
+                text-align: center;
+                top: 45%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                z-index: 20;
+                .book-title {
+                    color: var(--bs-white);
+                    font-size: 1.7rem;
+                    line-height: 1.2;
+                    position: relative;
+                    z-index: 10;
+                    font-family: 'Maple';
+                    .book-title-stroke {
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        -webkit-text-stroke: 8px #008d69;
+                    }
+                }
+            }
+        }
+        &::after {
+            content: '';
+            width: 300px;
+            height: 0;
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .toggle-btn-list .toggle-btn {
+        padding: 18px 36px;
+    }
+    .toggle-btn-list .toggle-btn {
+        font-size: 24px;
+    }
+    .tab-contents .writing-list {
+        justify-content: space-between;
+    }
+    .tab-contents .writing-list::after {
+        content: '';
+        width: 30%;
+        height: 0;
+    }
+    .tab-contents .drawing-list {
+        justify-content: space-between;
+    }
+    .tab-contents .drawing-list::after {
+        content: '';
+        width: 30%;
+        height: 0;
+    }
+}

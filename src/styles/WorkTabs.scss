@@ -1,0 +1,50 @@
+.conts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    .individual-conts {
+        width: 30%;
+        max-height: initial;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+        img {
+            object-fit: fill;
+        }
+        .work-desc {
+            padding: 1.25rem 1rem;
+            border: var(--is-border);
+            border-top: none;
+            border-radius: 8px;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 1.98px 3.959px 0px rgba(0, 0, 0, 0.25);
+            gap: 1rem;
+            .work-tit {
+                font-size: 20px;
+                color: var(--bs-blue-primary);
+                font-weight: 700;
+            }
+            .worker {
+                flex-shrink: 0;
+                font-size: 24px;
+            }
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .conts-list {
+        justify-content: space-between;
+    }
+    .conts-list::after {
+        content: '';
+        width: 30%;
+        height: 0;
+    }
+}

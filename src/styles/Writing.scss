@@ -1,0 +1,66 @@
+.prompt-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .toggle-option {
+        input {
+            display: none;
+        }
+        .toggle-option-title {
+            font-size: 18px;
+            margin-bottom: 0.7rem;
+        }
+        .toggle-option-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            .switch {
+                padding: 0.5rem 2rem;
+                border: 1px solid #4a8fff;
+                border-radius: 3rem;
+                cursor: pointer;
+                span {
+                    font-size: 24px;
+                    color: #7e7e7e;
+                }
+                &.checked {
+                    background-color: #92bcff;
+                    span {
+                        color: var(--bs-white);
+                    }
+                }
+            }
+        }
+    }
+    .run-btn {
+        background-color: var(--bs-blue-primary);
+        width: 30%;
+        text-align: center;
+        align-items: flex-end;
+        color: var(--bs-white);
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+        transition-duration: 0.3s;
+        &:hover {
+            background-color: var(--bs-blue-hovered);
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .prompt-box .toggle-option .toggle-option-title {
+        font-size: 24px;
+    }
+    .prompt-box .toggle-option .toggle-option-container .switch {
+        padding: 1.5rem 4rem;
+    }
+    .prompt-box .run-btn {
+        width: 100%;
+        line-height: 68px;
+    }
+}

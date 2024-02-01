@@ -1,0 +1,223 @@
+.class-detail {
+    .list-tit-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .tit {
+            margin-bottom: 3rem;
+        }
+        button {
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            span {
+                color: #393939;
+                font-size: 18px;
+            }
+        }
+    }
+    .teaching-container {
+        display: flex;
+        gap: 5rem;
+        .text-book {
+            position: relative;
+            min-height: 800px;
+            width: 50%;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 1.98px 3.959px 0px rgba(0, 0, 0, 0.25);
+            .summary {
+                padding: 3rem;
+                .training-tit {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+                .training-desc {
+                    display: inline-block;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    margin-bottom: 1rem;
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: #ddd;
+                        display: block;
+                        margin-top: 1rem;
+                    }
+                }
+                .value-container {
+                    margin: 1rem 0 3rem;
+                    .value-tit {
+                        font-size: 20px;
+                        color: rgb(51, 51, 51);
+                    }
+                    .value-desc {
+                        display: flex;
+                        align-items: center;
+                        font-size: 18px;
+                        margin: 0.6rem 0;
+                        &::before {
+                            content: '•';
+                            display: inline-block;
+                            margin-right: 0.3rem;
+                        }
+                    }
+                }
+            }
+            .wrapup-container {
+                padding: 3rem;
+                .wrapup-tit {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+                .wrapup-sub-tit {
+                    font-size: 22px;
+                    line-height: 1.4;
+                }
+                .answer-list {
+                    margin-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    li {
+                        button {
+                            width: 100%;
+                            text-align: left;
+                            border: none;
+                            padding: 1rem;
+                            border-radius: 4px;
+                            font-size: 16px;
+                            font-family: 'NEXONLv1Gothic';
+                        }
+                    }
+                }
+            }
+            .arrow-container {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 30%;
+                padding: 0 20px;
+                .arrow {
+                    width: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .divide-line {
+            width: 1px;
+            height: 800px;
+            background-color: #b1b1b1;
+        }
+        .training-container {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            .training {
+                background-color: var(--bs-bg-blue);
+                padding: 2rem;
+                border-radius: 8px;
+                .todays-training {
+                    font-size: 14px;
+                }
+                .prac-1 {
+                    border-bottom: var(--is-border);
+                    padding-bottom: 1rem;
+                    .training-tit {
+                        color: var(--bs-blue-primary);
+                        font-size: 22px;
+                        font-weight: 700;
+                        margin: 0.7rem 0 1rem;
+                    }
+                    .desc {
+                        font-size: 18px;
+                        color: var(--bs-blue-primary);
+                        line-height: 1.4;
+                    }
+                }
+                .prac-2 {
+                    margin: 2rem 0;
+                    p {
+                        line-height: 1.4;
+                        color: #525252;
+                    }
+                    .training-guide {
+                        margin-bottom: 1rem;
+                    }
+                }
+                .prac-3 {
+                    .prac-3-tit {
+                        display: flex;
+                        gap: 0.5rem;
+                        border-bottom: var(--is-border);
+                        padding-bottom: 0.5rem;
+                        margin-bottom: 1rem;
+                    }
+                    .training-link-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        li {
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            span {
+                                color: var(--bs-blue-primary);
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                                color: var(--bs-blue-primary);
+                            }
+                        }
+                    }
+                }
+            }
+            .discussion {
+                background-color: var(--bs-bg-blue);
+                padding: 2rem;
+                border-radius: 8px;
+                margin-top: 2rem;
+                .todays-discussion {
+                    font-size: 14px;
+                }
+                .show-discussion {
+                    width: 100%;
+                    height: 46px;
+                    line-height: 26px;
+                    font-weight: 700;
+                    background-color: var(--bs-blue-primary);
+                    color: var(--bs-white);
+                    border-radius: 6px;
+                    text-align: center;
+                    margin-top: 1rem;
+                    cursor: pointer;
+                    transition-duration: 0.3s;
+                    &:hover {
+                        background-color: var(--bs-blue-hovered);
+                    }
+                }
+            }
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .class-detail .teaching-container .text-book {
+        min-height: initial;
+    }
+    .class-detail .teaching-container .divide-line {
+        height: auto;
+    }
+}

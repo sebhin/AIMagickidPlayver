@@ -1,0 +1,46 @@
+.chapter-container {
+    margin-top: 5rem;
+    .chap-tit {
+        border-bottom: var(--is-border);
+        margin-bottom: 1.5rem;
+        padding: 0 1rem 0.8rem;
+        font-size: 22px;
+    }
+    .chapter-list {
+        display: flex;
+        gap: 1.25rem;
+        padding: 0 1rem 1.5rem;
+        overflow-x: scroll;
+        li {
+            width: 350px;
+            background-color: var(--bs-white);
+            border-radius: 12px;
+            flex-shrink: 0;
+            cursor: pointer;
+            box-shadow: 0px 1.98px 3.959px 0px rgba(0, 0, 0, 0.25);
+            .class-thumb {
+                height: 300px;
+                background-color: gray;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            dl {
+                padding: 1rem;
+                dt {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+                dd {
+                    margin-bottom: 0.8rem;
+                    color: #777777;
+                    &::before {
+                        content: '∙';
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

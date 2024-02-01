@@ -1,0 +1,76 @@
+.wide-view-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    .inner {
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        position: relative;
+        .close-btn {
+            width: 30%;
+            padding: 1rem;
+            text-align: center;
+            font-size: 24px;
+            background-color: var(--bs-blue-primary);
+            color: var(--bs-white);
+            cursor: pointer;
+            transition-duration: 0.3s;
+            &:hover {
+                background-color: var(--bs-blue-hovered);
+            }
+        }
+        .wide-image {
+            width: 30%;
+        }
+    }
+    .print-page{
+        display: none;
+        page-break-after: always;
+    }
+}
+// mediaQuery (수정 진행 중)
+// @media screen and (max-width: 1440px) {
+//     .wide-view-modal .inner .wide-image {
+//         width: 30%;
+//     }
+//     .wide-view-modal .inner .close-btn {
+//         width: 30%;
+//         text-align: center;
+//         font-size: 32px;
+//     }
+// }
+@media screen and (min-width: 1023px) and (max-width: 1366px) {
+    .wide-view-modal {
+        .inner {
+            .wide-image {
+                width: 30%;
+            }
+            .close-btn {
+                width: 30%;
+                text-align: center;
+                font-size: 32px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .wide-view-modal {
+        .inner {
+            .wide-image {
+                width: 45%;
+            }
+            .close-btn {
+                width: 45%;
+                text-align: center;
+                font-size: 32px;
+            }
+        }
+    }
+}

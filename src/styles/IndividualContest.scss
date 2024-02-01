@@ -1,0 +1,25 @@
+.contest-detail {
+    .register-my-work {
+        background-color: var(--bs-blue-primary);
+        color: var(--bs-white);
+        display: inline-flex;
+        float: right;
+        cursor: pointer;
+    }
+    .best-conts-slider {
+        background-color: var(--bs-bg-blue-light);
+        border-radius: 12px;
+        padding: 2rem 2rem;
+        margin-top: 7rem;
+        .best-tit {
+            font-size: 22px;
+            margin-bottom: 2rem;
+        }
+    }
+    .contest-category-list {
+        margin: 3rem 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 54px;
+    }
+}

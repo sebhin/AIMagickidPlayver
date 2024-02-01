@@ -1,0 +1,45 @@
+.choice-btn {
+    border: none;
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    font-family: 'NEXONLv1Gothic';
+    font-size: 24px;
+    &.selected {
+        font-weight: 700;
+        color: var(--bs-blue-primary);
+    }
+}
+.run-btn {
+    border: none;
+    background-color: var(--bs-blue-primary);
+    width: 30%;
+    text-align: center;
+    align-items: flex-end;
+    color: var(--bs-white);
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    transition-duration: 0.3s;
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    &:hover {
+        background-color: var(--bs-blue-hovered);
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .run-btn {
+        width: 100%;
+        margin-top: 2rem;
+        height: 80px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+}

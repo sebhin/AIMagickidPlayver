@@ -1,0 +1,45 @@
+.prompt-writing-title-box {
+    min-height: 800px;
+    width: 50%;
+    .title-image {
+        width: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    .tiggle-option-title {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+    }
+    .toggle-option-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        input {
+            display: none;
+        }
+        .switch {
+            padding: 0.5rem 2rem;
+            border: 1px solid #4a8fff;
+            border-radius: 3rem;
+            cursor: pointer;
+            span {
+                color: #7e7e7e;
+                font-size: 24px;
+            }
+            &.checked {
+                background-color: #92bcff;
+                span {
+                    color: var(--bs-white);
+                }
+            }
+        }
+    }
+    .run-btn {
+        opacity: 0.5;
+        transition-duration: 0.3s;
+        &.active {
+            opacity: 1;
+        }
+    }
+}

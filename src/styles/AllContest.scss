@@ -1,0 +1,26 @@
+.all-contest-list {
+    flex-wrap: wrap;
+    gap: 3rem;
+    display: flex;
+}
+.search-input {
+    border: var(--is-border);
+    padding: 6px 52px 6px 8px;
+    border-radius: 3rem;
+    font-family: 'NEXONLv1Gothic';
+}
+.submit-btn {
+    padding: 6px 16px;
+    margin-left: 0.5rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: var(--bs-blue-primary);
+    color: var(--bs-white);
+    font-family: 'NEXONLv1Gothic';
+    cursor: pointer;
+    transition-duration: 0.3s;
+    &:hover {
+        background-color: var(--bs-blue-hovered);
+    }
+}
+// 2023.12.28 | css 전체 수정

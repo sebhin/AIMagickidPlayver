@@ -1,0 +1,90 @@
+.view-all-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .inner {
+        max-height: 100vh;
+        overflow-y: auto;
+        border-radius: 4px;
+        padding: 3rem 2rem;
+        text-align: center;
+        .titles {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--bs-white);
+        }
+        .slide-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                all: unset;
+                cursor: pointer;
+            }
+            .all-list {
+                display: flex;
+                justify-content: center;
+                margin: 3rem 1rem;
+                gap: 1.5rem;
+                li {
+                    width: 520px;
+                    height: 670px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    position: relative;
+                    &.selected {
+                        border: 10px solid #fec816;
+                    }
+                    .paper-text-conts {
+                        font-family: 'KyoboHandwriting2019';
+                        position: absolute;
+                        top: 50px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 28px;
+                        line-height: 1.4;
+                        height: 580px;
+                        width: 75%;
+                        overflow: scroll;
+                    }
+                }
+            }
+        }
+        .select-btn {
+            background-color: var(--bs-blue-primary);
+            display: inline-flex;
+            color: var(--bs-white);
+            cursor: pointer;
+            transition-duration: 0.3s;
+            &:hover {
+                background-color: var(--bs-blue-hovered);
+            }
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .view-all-modal .inner .slide-container .all-list {
+        margin: 1rem;
+    }
+    .view-all-modal .inner .slide-container .all-list li {
+        width: 45%;
+        height: auto;
+    }
+    .view-all-modal .inner .slide-container button {
+        width: 100px;
+    }
+    .view-all-modal .inner .select-btn {
+        width: 50%;
+        padding: 1.8rem;
+        text-align: center;
+        font-size: 32px;
+        justify-content: center;
+    }
+}

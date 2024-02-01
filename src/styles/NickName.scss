@@ -1,0 +1,92 @@
+
+.nickname-wrap {
+    background-color: #eef3fe;
+    height: 100vh;
+    overflow: hidden;
+    .logo {
+        width: 530px;
+        margin-bottom: 5rem;
+    }
+    .nickname-container {
+        width: 100%;
+        display: flex;
+        .nickname-robot {
+            width: 35%;
+            display: flex;
+            position: relative;
+            .box {
+                width: 60px;
+                height: 100vh;
+                background-color: var(--bs-blue-primary);
+                flex-shrink: 0;
+                position: relative;
+                z-index: 2;
+            }
+            .robot-img {
+                flex-shrink: 0;
+                position: absolute;
+                left: 10px;
+                bottom: 0;
+                z-index: 99;
+            }
+        }
+        .nickname-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                color: var(--bs-blue-primary);
+            }
+            p {
+                margin: 1.5rem 0;
+                font-size: 32px;
+                color: gray;
+                font-weight: 300;
+                margin-bottom: 5rem;
+            }
+            .nick-form {
+                width: 50%;
+                .nick-inputs {
+                    display: flex;
+                    gap: 1rem;
+                    input[type='text'] {
+                        border: var(--is-border);
+                        padding: 2rem;
+                        border-radius: 4px;
+                        font-family: 'NEXONLv1Gothic';
+                        font-size: 24px;
+                        width: 80%;
+                    }
+                    button {
+                        border: var(--is-border);
+                        padding: 2rem;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        figure {
+                            width: 40px;
+                        }
+                    }
+                }
+                .submit-btn {
+                    padding: 1.25rem;
+                    font-family: 'NEXONLv1Gothic';
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    margin-top: 1rem;
+                    background-color: var(--bs-blue-primary);
+                    color: var(--bs-white);
+                    font-weight: 700;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

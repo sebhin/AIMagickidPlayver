@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./NEXON\ Lv1\ Gothic\ OTF.eot'),
+        url('./NEXON\ Lv1\ Gothic\ OTF.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 300;
+    font-style: normal;
+    src: url('./NEXON\ Lv1\ Gothic\ OTF\ Light.eot'),
+        url('./NEXON\ Lv1\ Gothic\ OTF\ Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    font-style: normal;
+    src: url('./NEXON\ Lv1\ Gothic\ OTF\ Bold.eot'),
+        url('./NEXON\ Lv1\ Gothic\ OTF\ Bold.woff') format('woff');
+}
+/* -------------------------넥슨고딕------------------------- */
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* -------------------------HS산토끼체------------------------- */
+@font-face {
+    font-family: 'UhBeemysen';
+    src: url('./UhBeemysen.eot'), url('./UhBeemysen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* -------------------------어비 마이센체------------------------- */
+@font-face {
+    font-family: 'KyoboHandwriting2019';
+    src: url('./KyoboHandwriting2019.eot'),
+        url('./KyoboHandwriting2019.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* -------------------------넥슨 메이플체 (2024-02-01 추가)------------------------- */
+@font-face {
+    font-family: 'Maple';
+    src: url('./MaplestoryLight.eot'),
+        url('./MaplestoryLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

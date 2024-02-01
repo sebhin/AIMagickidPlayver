@@ -1,0 +1,68 @@
+.result-container {
+    width: 40%;
+    .result-tit {
+        font-size: 2rem;
+    }
+    .result-box {
+        border: var(--is-border);
+        margin: 1rem 0;
+        border-radius: 12px;
+        font-size: 24px;
+        line-height: 1.6;
+        padding: 1rem;
+        text-align: center;
+        &.draw-result {
+            min-height: 600px;
+            max-height: initial;
+        }
+        &.writing-result {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            line-height: 1.8;
+            text-align: left;
+        }
+    }
+    .commercial-useage {
+        text-align: right;
+        padding-bottom: 1rem;
+        color: red;
+        font-size: 20px;
+    }
+    .poem-result {
+        font-size: 20px;
+        line-height: 3;
+        text-align: center;
+    }
+    .result-btn-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        font-size: 16px;
+        cursor: pointer;
+        .save-btn {
+            background-color: var(--bs-blue-primary);
+            color: var(--bs-white);
+            font-size: 24px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .wide-view-btn {
+            font-size: 24px;
+            padding: 16px 24px;
+            background-color: #d4d4d4;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .result-container .result-box.draw-result {
+        min-height: auto;
+    }
+}

@@ -1,0 +1,50 @@
+.category-item {
+    width: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 1.98px 3.959px 0px rgba(0, 0, 0, 0.25);
+    .category-thumb {
+        width: 100%;
+        // min-height: 380px;
+    }
+    .category-name {
+        background-color: var(--bs-bg-blue);
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .topic-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            .category {
+                color: var(--bs-blue-primary);
+            }
+            .topic-title {
+                font-size: 1.25rem;
+            }
+        }
+        .make-btn {
+            background-color: var(--bs-blue-primary);
+            color: var(--bs-white);
+            font-size: 14px;
+            padding: 0.7rem 1.25rem;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            &:hover {
+                background-color: var(--bs-blue-hovered);
+            }
+        }
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (max-width: 1440px) {
+    .prompt-category .category-list {
+        gap: 36px;
+        justify-content: space-between;
+    }
+    .category-item {
+        width: 48%;
+    }
+}

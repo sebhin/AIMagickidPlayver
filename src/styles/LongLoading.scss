@@ -1,0 +1,238 @@
+.long-loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: url('../../public/images/long-loading.svg') no-repeat center /
+        cover;
+    .inner {
+        .lighting {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .music-play-btn {
+            width: 120px;
+            position: absolute;
+            top: 70px;
+            left: 240px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            z-index: 9;
+        }
+        .loading-tit {
+            text-align: center;
+            padding-top: 8rem;
+            position: relative;
+            z-index: 2;
+            font-size: 36px;
+        }
+        .progress-bar {
+            margin: 2rem auto;
+        }
+        .clock {
+            position: fixed;
+            top: 50px;
+            right: 250px;
+            width: 100px;
+            animation: swing 2s ease-in-out infinite;
+            .count-down {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 32px;
+                font-weight: bold;
+                font-family: 'NEXONLv1Gothic';
+                &.red {
+                    color: red;
+                }
+            }
+            &::before {
+                content: '남은시간';
+                font-family: 'NEXONLv1Gothic';
+                font-size: 18px;
+                display: block;
+                margin: 0.5rem auto;
+                text-align: center;
+                font-family: 'NEXONLv1Gothic';
+            }
+        }
+        .gallery-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 3rem;
+            .item {
+                width: 30%;
+                // height: 500px;
+                border: 1px solid #1c2238;
+                padding: 1rem;
+                position: relative;
+                .item-inner {
+                    position: relative;
+                    figure {
+                        width: 100%;
+                        height: 100%;
+                        background-color: gray;
+                        overflow: hidden;
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                    }
+                    .desc {
+                        padding: 2rem 1rem;
+                        width: 100%;
+                        background-color: rgba(255, 255, 255, 0.6);
+                        position: absolute;
+                        bottom: 0;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        font-size: 24px;
+                        span {
+                            &.category {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .people {
+            position: absolute;
+            bottom: 10px;
+            &.people-1 {
+                right: 620px;
+            }
+            &.people-2 {
+                left: 200px;
+            }
+            &.people-3 {
+                right: 60px;
+            }
+        }
+    }
+    .gallery-bottom {
+        width: 100%;
+        height: 60px;
+        background-color: #c8c8c9;
+        position: fixed;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+    // 2024-02-08 업데이트 v2 | 미디어쿼리 테스트
+    .long-loading {
+        .inner {
+            .lighting {
+                width: 170px;
+            }
+            .loading-tit {
+                padding-top: 5rem;
+            }
+            .gallery-list {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .music-play-btn {
+                left: 150px;
+                top: 40px;
+            }
+            .clock {
+                top: 40px;
+                right: 130px;
+            }
+            .gallery-bottom {
+                height: 40px;
+            }
+            .people {
+                width: 170px;
+                &.people-1 {
+                    right: 100px;
+                }
+                &.people-2 {
+                    left: 30px;
+                }
+                &.people-3 {
+                    width: 80px;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1023px) and (max-width: 1366px) {
+    .long-loading {
+        .gallery-bottom {
+            height: 30px;
+        }
+        .inner {
+            .music-play-btn {
+                top: 40px;
+                left: 30px;
+            }
+            .clock {
+                right: 80px;
+            }
+            .gallery-list {
+                width: 100%;
+                margin: 3rem auto;
+            }
+            .people {
+                width: 130px;
+                &.people-1 {
+                    width: 130px;
+                    display: none;
+                }
+                &.people-2 {
+                    left: 10px;
+                }
+                &.people-3 {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .long-loading {
+        .gallery-bottom {
+            height: 30px;
+        }
+        .inner {
+            .music-play-btn {
+                top: 40px;
+                left: 30px;
+            }
+            .clock {
+                top: 25px;
+                right: 35px;
+            }
+            .gallery-list {
+                width: 100%;
+                margin: 2rem auto;
+            }
+            .people {
+                width: 130px;
+                &.people-1 {
+                    width: 130px;
+                    display: none;
+                }
+                &.people-2 {
+                    left: 10px;
+                }
+                &.people-3 {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}

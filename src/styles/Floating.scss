@@ -1,0 +1,51 @@
+.floating-btn {
+    width: 300px;
+    position: fixed;
+    bottom: -24px;
+    right: -10px;
+    .bubble {
+        width: 300px;
+        position: relative;
+        bottom: -160px;
+        right: 20px;
+    }
+    .char {
+        position: relative;
+        width: 330px;
+        bottom: -108px;
+        right: -83px;
+        transform: rotate(359deg);
+    }
+}
+@media screen and (min-width: 1023px) and (max-width: 1366px) {
+    .floating-btn {
+        .bubble {
+            width: 260px;
+            position: relative;
+            bottom: -142px;
+            right: -27px;
+        }
+        .char {
+            position: relative;
+            width: 280px;
+            bottom: -89px;
+            right: -116px;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .floating-btn {
+        .bubble {
+            width: 240px;
+            position: relative;
+            bottom: -129px;
+            right: -43px;
+        }
+        .char {
+            position: relative;
+            width: 260px;
+            bottom: -80px;
+            right: -127px;
+        }
+    }
+}

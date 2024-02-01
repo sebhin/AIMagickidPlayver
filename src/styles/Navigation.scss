@@ -1,0 +1,380 @@
+.nav {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    gap: 3rem;
+    .logo {
+        width: 230px;
+        cursor: pointer;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 180px;
+        li {
+            cursor: pointer;
+            .nav-btn {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.8rem;
+                border-radius: 0.2rem;
+                &.on {
+                    background-color: var(--bs-nav-on);
+                    .left {
+                        p {
+                            font-weight: bold;
+                            color: var(--bs-blue-primary);
+                        }
+                    }
+                }
+                .left {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                .right {
+                    width: 16px;
+                }
+            }
+        }
+        .accordion-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            li {
+                background-color: var(--bs-bg-blue-light);
+                padding: 0.8rem;
+                border-radius: 0.25rem;
+                transition: background-color 0.3s;
+                &:hover {
+                    background-color: #e6e6e7;
+                }
+            }
+        }
+    }
+    .logout {
+        border: none;
+        background-color: #ececec;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        padding: 0.8rem;
+        border-radius: 0.25rem;
+        margin-top: auto;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        span {
+            color: #969696;
+        }
+        &:hover {
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+    .ham-menu {
+        display: none;
+    }
+
+    // tab-menu
+    .menu-mask {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 98;
+        transition: 0.5s cubic-bezier(0.16, 0.9, 0.72, 0.97);
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .scale-page-content {
+        width: 80%;
+        height: 100vh;
+        background-color: var(--bs-white);
+        padding: 40px 30px;
+        transform: translateX(100%);
+        transition: 0.5s cubic-bezier(0.16, 0.9, 0.72, 0.97);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        overflow-y: scroll;
+        .tab-nav-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            li {
+                cursor: pointer;
+                .nav-btn {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0.8rem;
+                    border-radius: 0.2rem;
+                    &.on {
+                        background-color: var(--bs-nav-on);
+                        .left {
+                            p {
+                                font-weight: bold;
+                                color: var(--bs-blue-primary);
+                            }
+                        }
+                    }
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+                    .right {
+                        width: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .scale-page-content.visible {
+        transform: translateX(0);
+    }
+    .menu-mask.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+// mediaQuery (수정 진행 중)
+@media screen and (min-width: 1023px) and (max-width: 1366px) {
+    .nav {
+        max-width: initial;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            width: 190px;
+        }
+        .nav-list {
+            display: none;
+        }
+        .logout {
+            margin-top: 0;
+            display: none;
+        }
+        .ham-menu {
+            display: flex;
+        }
+    }
+    .ham-menu {
+        padding: 0.8rem 1.25rem;
+        background-color: #ffb93e;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        span {
+            color: var(--bs-white);
+            font-weight: bold;
+        }
+    }
+    .tab-nav-list {
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            .tab-left {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                figure {
+                    width: 130px;
+                }
+                span {
+                    font-size: 24px;
+                    font-family: 'KyoboHandwriting2019';
+                }
+            }
+            .tab-right {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                flex: 1;
+                .nav-con {
+                    text-align: center;
+                    border-radius: 4px;
+                    width: 40%;
+                    font-size: 32px;
+                    padding: 3rem 0;
+                    font-family: 'KyoboHandwriting2019';
+                    box-shadow: 0px 1.98px 3.959px 0px rgba(0, 0, 0, 0.25);
+                }
+            }
+            &.my {
+                .nav-con {
+                    background-color: #a1cef2;
+                }
+            }
+            &.class {
+                .nav-con {
+                    background-color: #eccce0;
+                }
+            }
+            &.school {
+                .nav-con {
+                    background-color: #afdfdf;
+                }
+            }
+            &:first-child {
+                border-bottom: var(--is-border);
+            }
+            &:nth-child(2) {
+                border-bottom: var(--is-border);
+            }
+        }
+    }
+    .scale-page-content {
+        .close-tab {
+            width: 36px;
+            margin-left: auto;
+        }
+        .tab-logout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ececec;
+            width: 160px;
+            padding: 0.8rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            border: none;
+            margin-left: auto;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav {
+        max-width: initial;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            width: 190px;
+        }
+        .nav-list {
+            display: none;
+        }
+        .logout {
+            margin-top: 0;
+            display: none;
+        }
+        .ham-menu {
+            display: flex;
+        }
+    }
+    .ham-menu {
+        padding: 0.8rem 1.25rem;
+        background-color: #ffb93e;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        span {
+            color: var(--bs-white);
+            font-weight: bold;
+        }
+    }
+    .tab-nav-list {
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            .tab-left {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                figure {
+                    width: 130px;
+                }
+                span {
+                    font-size: 24px;
+                    font-family: 'KyoboHandwriting2019';
+                }
+            }
+            .tab-right {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                flex: 1;
+                .nav-con {
+                    text-align: center;
+                    border-radius: 4px;
+                    width: 40%;
+                    font-size: 32px;
+                    padding: 3rem 0;
+                    font-family: 'KyoboHandwriting2019';
+                    box-shadow: 0px 1.98px 3.959px 0px rgba(0, 0, 0, 0.25);
+                }
+            }
+            &.my {
+                .nav-con {
+                    background-color: #a1cef2;
+                }
+            }
+            &.class {
+                .nav-con {
+                    background-color: #eccce0;
+                }
+            }
+            &.school {
+                .nav-con {
+                    background-color: #afdfdf;
+                }
+            }
+            &:first-child {
+                border-bottom: var(--is-border);
+            }
+            &:nth-child(2) {
+                border-bottom: var(--is-border);
+            }
+        }
+    }
+    .scale-page-content {
+        .close-tab {
+            width: 36px;
+            margin-left: auto;
+        }
+        .tab-logout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ececec;
+            width: 160px;
+            padding: 0.8rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            border: none;
+            margin-left: auto;
+        }
+    }
+}
